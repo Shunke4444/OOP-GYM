@@ -14,7 +14,8 @@ export default {
           
       },
       fontFamily: {
-        'jose' : [ "Josefin Sans", "sans-serif"],
+        'cambay' : [ "Cambay", "sans-serif"],
+        'lexend' : ["Lexend", "sans-serif"],
       }
     },
   },

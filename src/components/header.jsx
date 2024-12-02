@@ -3,9 +3,10 @@ import { FiSearch } from "react-icons/fi";
 import { MdNotificationsNone } from "react-icons/md";
 import User from '../assets/images/header/MichaelReeves.jpg';
 import { useState } from 'react';
+import Sidebar from './sidebar';
+
+
 export default function HeaderGym(props) {
-
-
   const [sidebar, setSidebar] = useState(false);
   const togglesidebar = () => {
     setSidebar((prevState) => !prevState);
@@ -19,7 +20,7 @@ export default function HeaderGym(props) {
           <button onClick={togglesidebar}>
           <img src={SideBarBtn} alt="Sidebar" />
           </button>
-          <h1 className="font-jose mt-[0.5rem] font-bold text-lg">{props.pagename}</h1>
+          <h1 className="font-cambay mt-[0.5rem] font-bold text-lg">{props.pagename}</h1>
         </div>
 
         {/* Right Side (Search Bar, Notifications, and User Profile) */}
@@ -30,8 +31,8 @@ export default function HeaderGym(props) {
             <input
               type="text"
               placeholder="Search"
-              className="ml-1 outline-none w-full"
-              />
+              className="ml-1 font-cambay mt-[0.5rem] outline-none w-full"
+            />
           </div>
           <MdNotificationsNone className="text-3xl" />
             <img
@@ -41,11 +42,11 @@ export default function HeaderGym(props) {
               />
         </div>
       </nav>
+      {sidebar && <Sidebar />}
     </header>
-
-    <section>
-
-    </section>
+      <section>
+      </section>
+    
   </>
   );
 }
