@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard';
 import Exercise from './pages/Exercise'
 import Logout from './pages/Logout'
 import Mealplan from './pages/Mealplan'
+import WorkoutLevel from './pages/Subpages/workoutLevel';
 const router = createBrowserRouter(
   createRoutesFromChildren(
     <Route>
@@ -14,6 +15,7 @@ const router = createBrowserRouter(
       <Route path='/exercise' element = {<Exercise/>}/>
       <Route path='/mealplan' element = {<Mealplan/>}/>
       <Route path='/logout' element = {<Logout/>}/>
+      <Route path='/workoutlevel' element = {<WorkoutLevel/>}/>
     </Route>
   )
 )
